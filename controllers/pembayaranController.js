@@ -17,6 +17,12 @@ const addPembayaran = async (req, res) => {
 
 }
 
+const allPembayaran = async (req, res) => {
+    let Pembayaran  = await db.tabelpembayaran.findAll({})
+    res.status(200).send(Pembayaran)
+}
+
 module.exports = {
-    addPembayaran
+    addPembayaran,
+    allPembayaran
 };
