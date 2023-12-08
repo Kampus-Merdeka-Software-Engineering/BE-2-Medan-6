@@ -8,7 +8,7 @@ let corOptions  = {
 }
 // middleware
 
-app.use(cors(corOptions))
+app.use(cors())
 
 app.use(express.json())
 
