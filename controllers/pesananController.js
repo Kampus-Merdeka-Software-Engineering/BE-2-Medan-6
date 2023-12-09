@@ -27,8 +27,8 @@ const addPesanan = async (req, res) => {
 
 const getOnePesanan = async (req, res) => {
     let id     = req.params.id
-    let motor  = await db.tabelpesanan.findOne({ where : { id : id }})
-    res.status(200).send(motor)
+    let pesanan  = await db.tabelpesanan.findOne({ where : { id : id }})
+    res.status(200).send(pesanan)
 }
 
 module.exports = {
