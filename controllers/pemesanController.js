@@ -8,7 +8,6 @@ const addPemesan = async (req, res) => {
         nama                 : req.body.nama,
         nik                  : req.body.nik,
         email                : req.body.email,
-        alamat               : req.body.alamat,
         nomorHandphone       : req.body.nomorHandphone,
         tabelMobilId         : req.body.tabelMobilId,
         tabelmotorId         : req.body.tabelmotorId,
