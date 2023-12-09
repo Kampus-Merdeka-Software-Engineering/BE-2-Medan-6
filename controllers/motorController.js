@@ -9,16 +9,24 @@ const Motor = db.tabelmotor
 // 1. get all motor
 
 const getAllMotor = async (req, res) => {
-        let motors  = await Motor.findAll({})
-        res.status(200).send(motors)
+        try {
+                let motors  = await Motor.findAll({})
+                res.status(200).send(motors)
+        } catch (error) {
+                
+        }
 }
 
 // 2. get single motor
 
 const getOneMotor = async (req, res) => {
-        let id = req.params.id
-        let motor  = await Motor.findOne({ where : { id : id }})
-        res.status(200).send(motor)
+        try {
+                let id = req.params.id
+                let motor  = await Motor.findOne({ where : { id : id }})
+                res.status(200).send(motor)
+        } catch (error) {
+                
+        }
 }
 
 module.exports = {

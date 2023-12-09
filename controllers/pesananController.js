@@ -26,9 +26,13 @@ const addPesanan = async (req, res) => {
 // 2. get single pesanan
 
 const getOnePesanan = async (req, res) => {
-    let id       = req.params.id
-    let pesanan  = await db.tabelpesanan.findOne({ where : { id : id }})
-    res.status(200).send(pesanan)
+    try {
+        let id       = req.params.id
+        let pesanan  = await db.tabelpesanan.findOne({ where : { id : id }})
+        res.status(200).send(pesanan)
+    } catch (error) {
+        
+    }
 }
 
 module.exports = {
