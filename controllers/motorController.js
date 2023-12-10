@@ -7,6 +7,20 @@ const Motor = db.tabelmotor
 // main work
 // https://be-2-medan-6-production.up.railway.app/
 
+const addMotor = async (req, res) => {
+    
+        let info = {
+            namaMotor    : req.body.namaMotor,
+            harga        : req.body.harga,
+            tipeMotor    : req.body.tipeMotor,
+        }
+    
+        const Motor = await db.tabelmotor.create(info)
+        res.status(200).send(Motor)
+        console.log(Motor)
+    
+    }
+
 // 1. get all motor
 
 const getAllMotor = async (req, res) => {
@@ -23,6 +37,7 @@ const getOneMotor = async (req, res) => {
 }
 
 module.exports = {
+    addMotor,
     getAllMotor,
     getOneMotor
 };
