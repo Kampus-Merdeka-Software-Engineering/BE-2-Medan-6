@@ -6,6 +6,26 @@ const Motor = db.tabelmotor
 
 // main work
 
+// add Motor
+const addMotor = async (req, res) => {
+    
+        try {
+            let info = {
+                namaMotor    : req.body.namaMotor,
+                harga        : req.body.harga,
+                tipeMotor    : req.body.tipeMotor,
+            }
+        
+            const Motor = await db.tabelmotor.create(info)
+            res.status(200).send(Motor)
+            console.log(Motor)
+        } catch (error) {
+            console.log(error)
+        }
+    
+    
+    }
+
 // 1. get all motor
 
 const getAllMotor = async (req, res) => {
