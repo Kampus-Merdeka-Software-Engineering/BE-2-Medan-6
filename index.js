@@ -3,11 +3,6 @@ const cors      = require("cors")
 
 const app       = express();
 
-let corOptions  = {
-    origin : "https://localhost"
-}
-// middleware
-
 app.use(cors())
 
 app.use(express.json())
