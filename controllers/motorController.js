@@ -5,6 +5,7 @@ const db = require('../models')
 const Motor = db.tabelmotor
 
 // main work
+// https://be-2-medan-6-production.up.railway.app/
 
 // 1. get all motor
 
