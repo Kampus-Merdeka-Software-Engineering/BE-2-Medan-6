@@ -50,6 +50,7 @@ const getOneMotor = async (req, res) => {
 }
 
 module.exports = {
+        addMotor,
     getAllMotor,
     getOneMotor
 };
