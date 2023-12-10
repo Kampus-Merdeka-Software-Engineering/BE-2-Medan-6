@@ -52,6 +52,7 @@ const getOneMobil = async (req, res) => {
 }
 
 module.exports = {
+    addMobil,
     getAllMobil,
     getOneMobil
 };
