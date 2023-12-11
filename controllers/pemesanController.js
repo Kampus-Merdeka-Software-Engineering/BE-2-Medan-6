@@ -9,10 +9,7 @@ const addPemesan = async (req, res) => {
         nik                  : req.body.nik,
         email                : req.body.email,
         alamat               : req.body.alamat,
-        nomorHandphone       : req.body.nomorHandphone,
-        tabelMobilId         : req.body.tabelMobilId,
-        tabelmotorId         : req.body.tabelmotorId,
-        tabelpesananId       : req.body.tabelpesananId,
+        nomorHandphone       : req.body.nomorHandphone
     }
 
     const Pemesan = await db.tabelpemesan.create(info)
