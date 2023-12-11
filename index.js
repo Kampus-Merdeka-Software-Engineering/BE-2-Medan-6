@@ -5,9 +5,9 @@ const app       = express();
 
 // middleware
 
-let corsOption = {
-    origin : "https://be-2-medan-6-production.up.railway.app/"
-}
+// let corsOption = {
+//     origin : "https://be-2-medan-6-production.up.railway.app/"
+// }
 
 app.use(cors(corsOption))
 
