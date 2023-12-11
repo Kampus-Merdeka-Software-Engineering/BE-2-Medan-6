@@ -4,17 +4,21 @@ const db = require('../models');
 
 const addPemesan = async (req, res) => {
     
-    let info = {
-        nama                 : req.body.nama,
-        nik                  : req.body.nik,
-        email                : req.body.email,
-        alamat               : req.body.alamat,
-        nomorHandphone       : req.body.nomorHandphone
+    try {
+        let info = {
+            nama                 : req.body.nama,
+            nik                  : req.body.nik,
+            email                : req.body.email,
+            alamat               : req.body.alamat,
+            nomorHandphone       : req.body.nomorHandphone
+        }
+    
+        const Pemesan = await db.tabelpemesan.create(info)
+        res.status(200).send(Pemesan)
+        console.log(Pemesan)
+    } catch (error) {
+        console.log(error)
     }
-
-    const Pemesan = await db.tabelpemesan.create(info)
-    res.status(200).send(Pemesan)
-    console.log(Pemesan)
 
 }
 
