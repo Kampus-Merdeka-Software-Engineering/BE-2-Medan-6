@@ -30,7 +30,18 @@ const getOnePemesan = async (req, res) => {
     res.status(200).send(pemesan)
 }
 
+// get all 
+const getAllPemesan = async (req, res) => {
+    try {
+        let pemesan  = await pemesan.findAll({})
+        res.status(200).send(pemesan)
+    } catch (error) {
+        
+    }
+}
+
 module.exports = {
+    getAllPemesan,
     addPemesan,
     getOnePemesan
 };
