@@ -15,8 +15,8 @@ const addPemesan = async (req, res) => {
     
         const Pemesan = await db.tabelpemesan.create(info)
         res.status(200).send(Pemesan)
-        console.log(Pemesan)
         return 
+        console.log(Pemesan)
     } catch (error) {
         console.log(error)
     }
