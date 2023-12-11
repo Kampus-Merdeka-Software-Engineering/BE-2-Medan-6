@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
             type : DataTypes.STRING
         },
         nik : {
-            type : DataTypes.INTEGER
+            type : DataTypes.STRING
         },
         email : {
             type : DataTypes.STRING
@@ -16,6 +16,9 @@ module.exports = (sequelize, DataTypes) => {
         nomorHandphone : {
             type : DataTypes.STRING
         },
+    }, {
+        tableName : "pemesan", 
+        timestamps : false
     });
 
     return Pemesan;
