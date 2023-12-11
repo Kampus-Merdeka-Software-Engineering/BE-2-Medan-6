@@ -4,16 +4,9 @@ const cors      = require("cors")
 const app       = express();
 
 // middleware
-
-let corsOption = {
-    origin : "https://be-2-medan-6-production.up.railway.app/"
-}
-
 app.use(cors(corsOption))
 
 app.use(express.json())
-
-app.use(express.urlencoded({ extended : true }))
 
 
 // routers
