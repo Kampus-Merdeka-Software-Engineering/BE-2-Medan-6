@@ -9,7 +9,7 @@ const app       = express();
 //     origin : "https://be-2-medan-6-production.up.railway.app/"
 // }
 
-app.use(cors(corsOption))
+app.use(cors())
 
 app.use(express.json())
 
