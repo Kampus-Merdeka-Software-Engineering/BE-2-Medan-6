@@ -32,7 +32,7 @@ const getOnePemesan = async (req, res) => {
 
 // get all 
 const getAllPemesan = async (req, res) => {
-        let pemesan  = await db.tabelpemesan.findAll({})
+        let pemesan  = await db.pemesan.findAll({})
         res.status(200).send(pemesan)
 }
 
